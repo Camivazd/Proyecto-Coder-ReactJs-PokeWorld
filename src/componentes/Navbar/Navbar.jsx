@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget/CartWidget";
 
 
-const Navbar = () => { //Creé un NavBar con el logo de la tienda.
+const Navbar = () => {
     return (
         <div className="navbar border-b-4 border-indigo-950/120 flex flex-row"><font></font>
 
@@ -44,8 +44,6 @@ const Navbar = () => { //Creé un NavBar con el logo de la tienda.
 
         </div >
     )
-    //Creé un CartWidget que retorna 2 íconos y uno es el carrito con un número hardcodeado.
-    //Lo incorporé en el NavBar.
 }
 
 export default Navbar

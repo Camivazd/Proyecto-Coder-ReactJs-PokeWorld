@@ -1,15 +1,24 @@
 
-export const CartContainer = () => {
+import { useCartContext } from "../context/CartContext";
+
+import {CartItems} from "./CartItems"
+import { CartEmpty } from "./CartEmpty";
+
+const CartContainer = () => {
+
+    const { cart } = useCartContext()
+
+    //2 componentes, CartItems y GenerateOrder
+
     return (
-
-        <div className="flex flex-col modal-box w-9/12 max-w-5xl mx-auto h-64">
-            <div className="mt-16">
-                <h3 className="font-bold text-2xl text-center">Hola!</h3>
-                <p className="py-4 text-center text-base">Tu carrito está vacío</p>
-            </div>
-        </div>
-
+        <>
+            {cart.length > 0 ? (
+                <CartItems />
+            ) : (
+                <CartEmpty />
+            )}
+        </>
     )
 }
 
-export default CartContainer
+export default CartContainer;

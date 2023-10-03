@@ -2,7 +2,7 @@
 function Footer() {
 
     return (
-        <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+        <footer className="footer footer-center p-10 bg-slate-200 text-base-content rounded mt-4">
             <nav className="grid grid-flow-col gap-4">
                 <a className="link link-hover">Todos</a>
                 <a className="link link-hover">Mochilas</a>

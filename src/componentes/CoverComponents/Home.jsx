@@ -1,14 +1,14 @@
 
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
-import PortadaUno from "./PortadaUno";
-import PortadaDos from "./PortadaDos";
+import OneCover from "./OneCover";
+import TwoCover from "./TwoCover";
 
 function Home() {
     return (
         <>
-            <PortadaUno />
+            <OneCover />
             <ItemListContainer />
-            <PortadaDos />
+            <TwoCover />
         </>
     );
 }

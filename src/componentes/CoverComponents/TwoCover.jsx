@@ -1,5 +1,5 @@
 
-const PortadaDos = () => {
+const TwoCover = () => {
     return (
         <div className="hero min-h-96 h-5/6" style={{ backgroundImage: 'url(https://crystal-cdn2.crystalcommerce.com/photos/6330565/splashBanner_pokemon.jpg)' }}>
             <div className="hero-overlay"></div>
@@ -12,4 +12,4 @@ const PortadaDos = () => {
     )
 }
 
-export default PortadaDos
+export default TwoCover

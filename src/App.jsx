@@ -6,7 +6,9 @@ import Navbar from './componentes/Navbar/Navbar';
 import Footer from './componentes/Footer/Footer';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import CartContainer from './componentes/CartContainer/CartContainer';
-import Home from "./componentes/ComponentePortadas/Home";
+import Home from "./componentes/CoverComponents/Home";
+import {GenerateOrder} from "./componentes/CartContainer/GenerateOrder";
+import { CartContextProvider } from "./componentes/context/CartContext";
 
 import './App.css';
 
@@ -17,16 +19,21 @@ function App() {
 
       <Router>
 
-        <Navbar />
+        <CartContextProvider>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/categoria/:categoriaid" element={< ItemListContainer />} />
+          <Navbar />
 
-          <Route path="/detalle/:productoid" element={< ItemDetailContainer />} />
-          <Route path="/cart" element={< CartContainer />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/categoria/:categoriaid" element={< ItemListContainer />} />
+
+            <Route path="/detalle/:productoid" element={< ItemDetailContainer />} />
+            <Route path="/cart" element={< CartContainer />} />
+            <Route path="/order" element={< GenerateOrder />} />
+          </Routes>
+
+        </CartContextProvider>
 
         < Footer />
 
@@ -35,7 +42,5 @@ function App() {
     </>
   )
 }
-
-//Creé el componente ItemListContainer que devuelve un mensaje con su estilo.
 
 export default App

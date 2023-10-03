@@ -1,5 +1,5 @@
 
-const PortadaUno = () => {
+const OneCover = () => {
     return (
         <div className="hero min-h-96 h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/5XDnpMT/banner1.jpg)' }}>
             <div className="hero-overlay"></div>
@@ -13,4 +13,4 @@ const PortadaUno = () => {
     )
 }
 
-export default PortadaUno
+export default OneCover
